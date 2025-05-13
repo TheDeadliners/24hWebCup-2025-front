@@ -21,13 +21,13 @@ export default function ApiTester({ requestType }: { requestType: string }) {
         setStatus("idle");
 
         try {
-            await new Promise((resolve) => setTimeout(resolve, 5000)); // Simule un délai
+            await new Promise((resolve) => setTimeout(resolve, 2500));
 
             const response = await fetch("https://api.deadliners.lareunion.webcup.hodi.host/api/test", {
                 method: requestType.toUpperCase(),
                 headers: { 'Content-Type': 'application/json' },
                 ...(requestType.toUpperCase() === 'POST' && {
-                    body: JSON.stringify({ value: inputValue }), // on envoie la valeur
+                    body: JSON.stringify({ name: inputValue }), // on envoie la valeur
                 }),
             });
 
