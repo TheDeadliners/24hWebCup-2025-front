@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 
-export default function ApiTester({requestType}: {requestType: string}) {
+export default function ApiTester({ requestType }: { requestType: string }) {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+    const [inputValue, setInputValue] = useState(""); // État pour l'input
 
     const buttonColor =
         status === "success"
@@ -20,15 +21,16 @@ export default function ApiTester({requestType}: {requestType: string}) {
         setStatus("idle");
 
         try {
-            await new Promise((resolve) => setTimeout(resolve, 5000));
+            await new Promise((resolve) => setTimeout(resolve, 5000)); // Simule un délai
 
-            const response = await fetch("https://localhost:8000/api/test", {
+            const response = await fetch("https://api.deadliners.lareunion.webcup.hodi.host/api/test", {
                 method: requestType.toUpperCase(),
                 headers: { 'Content-Type': 'application/json' },
                 ...(requestType.toUpperCase() === 'POST' && {
-                    body: JSON.stringify({ key: 'value' }),
+                    body: JSON.stringify({ value: inputValue }), // on envoie la valeur
                 }),
             });
+
             const data = await response.json();
             setMessage(JSON.stringify(data, null, 2));
             setStatus("success");
@@ -43,6 +45,17 @@ export default function ApiTester({requestType}: {requestType: string}) {
 
     return (
         <section className="w-full flex flex-col gap-4 justify-center items-center text-center px-4">
+            {requestType.toLowerCase() === "post" && (
+                <div className="w-full max-w-sm min-w-xs">
+                    <input
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        className="w-full bg-transparent placeholder:text-slate-400 text-neutral-700 text-sm border border-neutral-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-neutral-400 hover:border-neutral-300 shadow-sm focus:shadow"
+                        placeholder="Type here data to send..."
+                    />
+                </div>
+            )}
+
             <div>
                 <button
                     onClick={handleClick}
