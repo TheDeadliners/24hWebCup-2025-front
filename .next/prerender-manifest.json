@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/favicon.ico": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -53,13 +29,37 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "2a7419d9a5c993c7964fd0381a58439a",
-    "previewModeSigningKey": "e5d033fdccb78baafe6f1565cf0e5f0c264dbfbcb3d9ba1c589e241d5596d26b",
-    "previewModeEncryptionKey": "062a2f9cd3c07289014b5f9e8ffa54b8c350ff62bfccf3399a61b49281731ef0"
+    "previewModeId": "04ce92d5f944a08bb0877c1349a2da92",
+    "previewModeSigningKey": "741d5fc590ac55c431d8f9dc7f723345533eca3d65fe3d42d991deb118c8dd1a",
+    "previewModeEncryptionKey": "10358e87b86824ca3d8ec84e38aef8fafc85a216f6639cb33e9f4619f929a848"
   }
 }
