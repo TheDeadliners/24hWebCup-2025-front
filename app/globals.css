@@ -1,1 +1,11 @@
 @import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+    name: "custom";
+    default: true;
+    --color-primary: blue;
+    --color-accent: purple;
+    --color-success: green;
+    --color-warning: yellow;
+    --color-error: red;
+}
