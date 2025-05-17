@@ -305,7 +305,7 @@ const Leaderboard: React.FC = () => {
             {/* Footer */}
             <footer className="footer footer-center p-10 bg-base-200 text-base-content mt-16">
                 <aside>
-                    <p className="text-white/50 text-sm">© 2025 TheEnd.page - Parce que toutes les fins méritent d'être inoubliables.</p>
+                    <p className="text-white/50 text-sm">© 2025 TheEnd.page - Parce que toutes les fins méritent d&apos;être inoubliables.</p>
                 </aside>
             </footer>
         </main>

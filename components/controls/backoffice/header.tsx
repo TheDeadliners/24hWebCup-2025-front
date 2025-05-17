@@ -3,6 +3,7 @@ import React from "react";
 import LogoutModal from "@/components/controls/backoffice/logout-modal";
 import {UserCircleIcon, HouseIcon} from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Header() {
     const userData: UserData = await getUserData() as UserData;
@@ -18,19 +19,17 @@ export default async function Header() {
                         <HouseIcon weight="bold" className="h-6 w-6" /> <span className="hidden md:flex">Menu</span>
                     </Link>
                 </div>
+                <div className="navbar-center">
+                    <Image src="/images/logo.svg" alt="TheEndPage logo" priority={true} width={116} height={116}/>
+                </div>
                 <div className="navbar-end">
                     <LogoutModal userData={userData} />
                 </div>
             </div>
+
             <div className="flex md:hidden navbar shadow-sm py-6">
                 <div className="navbar-center justify-center w-full gap-2">
-                    <Link href="/account" className="btn">
-                        <UserCircleIcon weight="bold" className="h-6 w-6" /> <span className="hidden md:flex">Profil</span>
-                    </Link>
-                    <Link href="/dashboard" className="btn">
-                        <HouseIcon weight="bold" className="h-6 w-6" /> <span className="hidden md:flex">Menu</span>
-                    </Link>
-                    <LogoutModal userData={userData} />
+                    <Image src="/images/logo.svg" alt="TheEndPage logo" priority={true} width={124} height={124}/>
                 </div>
             </div>
         </>

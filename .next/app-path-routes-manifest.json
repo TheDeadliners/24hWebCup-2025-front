@@ -1,0 +1,13 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/_not-found/page": "/_not-found",
+  "/leaderboard/page": "/leaderboard",
+  "/page": "/",
+  "/(root)/(auth)/forgot-password/page": "/forgot-password",
+  "/(root)/(auth)/reset-password/page": "/reset-password",
+  "/(root)/(auth)/register/page": "/register",
+  "/(root)/(backoffice)/dashboard/page": "/dashboard",
+  "/(root)/(auth)/login/page": "/login",
+  "/(root)/(backoffice)/account/edit/page": "/account/edit",
+  "/(root)/(backoffice)/account/page": "/account"
+}
