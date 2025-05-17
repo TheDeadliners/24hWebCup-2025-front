@@ -1,116 +1,116 @@
-@import "tailwindcss";
-@plugin "daisyui";
+    @import "tailwindcss";
+    @plugin "daisyui";
 
-@plugin "daisyui/theme" {
-    name: the-end-page;
-    default: true;
-    prefersdark: false;
-    color-scheme: light;
-    --color-base-300: oklch(15.3% 0.005 28/0.85);
-    --color-base-200: oklch(10.3% 0.005 28/0.85);
-    --color-base-100: oklch(5.3% 0.005 28/0.85);
-    --color-base-content: oklch(100% 0 0);
-    --color-primary: #D2AFFF;
-    --color-primary-content: oklch(100% 0 0);
-    --color-secondary: #0671BA;
-    --color-secondary-content: oklch(100% 0 0);
-    --color-accent: #9066c7;
-    --color-accent-content: oklch(100% 0 0);
-    --color-neutral: oklch(14% 0.004 49.25);
-    --color-neutral-content: oklch(100% 0 0);
-    --color-info: oklch(93% 0.032 255.585);
-    --color-info-content: oklch(28% 0.091 267.935);
-    --color-success: oklch(84.1% 0.238 128.85);
-    --color-success-content: oklch(100% 0 0);
-    --color-warning: oklch(95% 0.038 75.164);
-    --color-warning-content: oklch(26% 0.079 36.259);
-    --color-error: oklch(64.5% 0.246 16.439);
-    --color-error-content: oklch(100% 0 0);
-    --radius-selector: 2rem;
-    --radius-field: 2rem;
-    --radius-box: 2rem;
-    --size-selector: 0.25rem;
-    --size-field: 0.25rem;
-    --border: 0.5px;
-    --depth: 1;
-    --noise: 1;
-}
-
-@layer base {
-    body {
-        @apply antialiased;
+    @plugin "daisyui/theme" {
+        name: the-end-page;
+        default: true;
+        prefersdark: false;
+        color-scheme: light;
+        --color-base-300: oklch(15.3% 0.005 28/0.85);
+        --color-base-200: oklch(10.3% 0.005 28/0.85);
+        --color-base-100: oklch(5.3% 0.005 28/0.85);
+        --color-base-content: oklch(100% 0 0);
+        --color-primary: #D2AFFF;
+        --color-primary-content: oklch(100% 0 0);
+        --color-secondary: #0671BA;
+        --color-secondary-content: oklch(100% 0 0);
+        --color-accent: #9066c7;
+        --color-accent-content: oklch(100% 0 0);
+        --color-neutral: oklch(14% 0.004 49.25);
+        --color-neutral-content: oklch(100% 0 0);
+        --color-info: oklch(93% 0.032 255.585);
+        --color-info-content: oklch(28% 0.091 267.935);
+        --color-success: oklch(84.1% 0.238 128.85);
+        --color-success-content: oklch(100% 0 0);
+        --color-warning: oklch(95% 0.038 75.164);
+        --color-warning-content: oklch(26% 0.079 36.259);
+        --color-error: oklch(64.5% 0.246 16.439);
+        --color-error-content: oklch(100% 0 0);
+        --radius-selector: 2rem;
+        --radius-field: 2rem;
+        --radius-box: 2rem;
+        --size-selector: 0.25rem;
+        --size-field: 0.25rem;
+        --border: 0.5px;
+        --depth: 1;
+        --noise: 1;
     }
 
-    .logo {
-        font-size: 1.8rem;
-        font-weight: 900;
-        color: var(--light);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        letter-spacing: -0.5px;
-        transition: transform 0.3s;
+    @layer base {
+        body {
+            @apply antialiased;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.5px;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo span {
+            @apply italic text-primary
+        }
     }
 
-    .logo:hover {
-        transform: scale(1.05);
-    }
+    @layer utilities {
+        .btn-primary {
+            @apply bg-gradient-to-br from-primary to-accent;
+        }
 
-    .logo span {
-        @apply italic text-primary
-    }
-}
+        .alert {
+            @apply font-semibold justify-center;
+        }
 
-@layer utilities {
-    .btn-primary {
-        @apply bg-gradient-to-br from-primary to-accent;
-    }
+        .btn-error, .alert-error {
+            @apply bg-gradient-to-br from-rose-300 to-error;
+        }
 
-    .alert {
-        @apply font-semibold justify-center;
-    }
+        .btn-success, .alert-success, .badge-success {
+            @apply bg-gradient-to-br from-lime-300 to-success;
+        }
 
-    .btn-error, .alert-error {
-        @apply bg-gradient-to-br from-rose-300 to-error;
-    }
+        .btn {
+            @apply font-bold text-base;
+        }
 
-    .btn-success, .alert-success, .badge-success {
-        @apply bg-gradient-to-br from-lime-300 to-success;
-    }
+        .modal.modal-open {
+            @apply bg-black;
+        }
 
-    .btn {
-        @apply font-bold text-base;
-    }
+        .card, .modal-box {
+            @apply bg-white/5 border border-white/10;
+        }
 
-    .modal.modal-open {
-        @apply bg-black;
-    }
+        .card-title {
+            @apply font-black text-primary text-2xl;
+        }
 
-    .card, .modal-box {
-        @apply bg-white/5 border border-white/10;
-    }
+        .input {
+            @apply text-base w-full bg-white/5;
+        }
 
-    .card-title {
-        @apply font-black text-primary text-2xl;
-    }
+        .alert, .table {
+            @apply text-base;
+        }
 
-    .input {
-        @apply text-base w-full bg-white/5;
-    }
+        .fieldset, .stat-title {
+            @apply text-base;
+        }
 
-    .alert, .table {
-        @apply text-base;
-    }
+        .form-error {
+            @apply flex justify-start items-center gap-2.5 text-rose-400 text-sm
+        }
 
-    .fieldset, .stat-title {
-        @apply text-base;
+        .navbar-start, .navbar-end {
+            @apply px-6
+        }
     }
-
-    .form-error {
-        @apply flex justify-start items-center gap-2.5 text-rose-400 text-sm
-    }
-
-    .navbar-start, .navbar-end {
-        @apply px-6
-    }
-}
