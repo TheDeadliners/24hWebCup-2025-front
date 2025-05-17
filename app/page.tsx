@@ -1,42 +1,39 @@
 import "./page.css";
+import Image from 'next/image';
+
+import Navbar from '@/components/Navbar';
+import Link from "next/link";
+
 
 export default function Home() {
     return (
-        <main>
+        <main className="w-full">
             <div className="noise"></div>
-
-            <header>
-                <nav>
-                    <a href="#" className="logo">The<span>End</span>.page</a>
-                    <div className="nav-links">
-                        <a href="#features">Styles</a>
-                        <a href="#how-it-works">Comment ça marche</a>
-                        <a href="#gallery">Exemples</a>
-                        <a href="#testimonials">Témoignages</a>
-                    </div>
-                    <a href="#create" className="cta-button door-slam-btn">Créer ma page</a>
-                </nav>
-            </header>
+            <Navbar />
 
             <section className="hero">
                 <div className="bg-elements">
                     <div className="bg-circle circle-1"></div>
                     <div className="bg-circle circle-2"></div>
                     <div className="floating-gif gif-1">
-                        <img src="/leave.png" alt="GIF animé porte qui claque"/>
+                        <Image src="/img/leave.png" alt="GIF animé porte qui claque" width={200}
+                               height={200} />
                     </div>
                     <div className="floating-gif gif-2">
-                        <img src="/masque.png" alt="GIF animé au revoir"/>
+                        <Image src="/img/masque.png" alt="GIF animé au revoir" width={200}
+                               height={200} />
                     </div>
                     <div className="floating-gif gif-3">
-                        <img src="/exit.png" alt="GIF animé dramatique"/>
+                        <Image src="/img/exit.png" alt="GIF animé dramatique" width={200}
+                               height={200} />
                     </div>
                     <div className="floating-gif gif-4">
-                        <img src="/heart.png" alt="GIF animé dramatique"/>
+                        <Image src="/img/heart.png" alt="GIF animé dramatique" width={200}
+                               height={200} />
                     </div>
                 </div>
 
-                <div className="hero-content">
+                <div className="hero-content flex flex-col">
                     <h1>Claque la porte avec <span className="highlight glitch-effect" data-text="style">style</span>
                     </h1>
                     <p className="tagline">Créez votre page de départ mémorable - pour quitter votre job, votre couple,
@@ -101,7 +98,7 @@ export default function Home() {
 
             <section className="how-it-works" id="how-it-works">
                 <h2 className="section-title">Comment ça marche</h2>
-                <div className="steps">
+                <div className="steps gap-x-7 mx-auto min-w-7xl flex justify-center">
                     <div className="step">
                         <div className="step-number">1</div>
                         <h3>Choisis ton style</h3>
@@ -131,25 +128,21 @@ export default function Home() {
             <section className="gallery" id="gallery">
                 <h2 className="section-title">Des départs qui claquent</h2>
                 <div className="examples">
-                    <div className="example-card">
-                        <img src="/api/placeholder/400/250" alt="Exemple de page de démission" className="example-img"/>
+                    <div className="example-card" style={{ backgroundImage: "url('/img/example1.png')" }}>
                         <div className="example-overlay">
                             <h4>Au revoir, startup toxique</h4>
                             <p>Claire a quitté sa startup après 2 ans de promesses non tenues.</p>
                         </div>
                     </div>
 
-                    <div className="example-card">
-                        <img src="/api/placeholder/400/250" alt="Exemple de page de rupture" className="example-img"/>
+                    <div className="example-card" style={{ backgroundImage: "url('/img/example2.png')" }}>
                         <div className="example-overlay">
                             <h4>C'est pas toi, c'est moi</h4>
                             <p>Thomas explique pourquoi il quitte son coloc après 3 ans.</p>
                         </div>
                     </div>
 
-                    <div className="example-card">
-                        <img src="/api/placeholder/400/250" alt="Exemple de page de départ en retraite"
-                             className="example-img"/>
+                    <div className="example-card" style={{ backgroundImage: "url('/img/example3.png')" }}>
                         <div className="example-overlay">
                             <h4>30 ans de service</h4>
                             <p>Bernard part à la retraite en mode passif-agressif.</p>
@@ -166,8 +159,9 @@ export default function Home() {
                             TheEnd est devenue virale dans toute l'entreprise. Le DRH a même dû organiser une réunion
                             d'urgence. Meilleure. Décision. De. Ma. Vie."</p>
                         <div className="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar de Julien" className="author-avatar"/>
-                            <div>
+                            <Image className="rounded-full" src="/img/avatar1.jpg" alt="" width={30}
+                                   height={30} />
+                            <div className="testimonial-author-text">
                                 <div className="author-name">Julien D.</div>
                                 <div className="author-title">Ex-dev fullstack sous-payé</div>
                             </div>
@@ -179,8 +173,9 @@ export default function Home() {
                             TheEnd.page m'a permis d'exprimer tout ce que je n'avais jamais osé dire en face. Libération
                             totale."</p>
                         <div className="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar de Sophie" className="author-avatar"/>
-                            <div>
+                            <Image className="rounded-full" src="/img/avatar2.jpg" alt="" width={30}
+                                   height={30} />
+                            <div className="testimonial-author-text">
                                 <div className="author-name">Sophie M.</div>
                                 <div className="author-title">Cœur maintenant libre</div>
                             </div>
@@ -192,8 +187,9 @@ export default function Home() {
                             messages passifs-agressifs de ma belle-mère. Ma page était tellement drôle que même mon mari
                             a dû admettre que j'avais raison."</p>
                         <div className="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar de Laure" className="author-avatar"/>
-                            <div>
+                            <Image className="rounded-full" src="/img/avatar.jpg" alt="" width={30}
+                                   height={30} />
+                            <div className="testimonial-author-text">
                                 <div className="author-name">Laure T.</div>
                                 <div className="author-title">Belle-fille libérée</div>
                             </div>
@@ -206,18 +202,11 @@ export default function Home() {
                 <h2 className="cta-title">Prêt à claquer la porte ?</h2>
                 <p className="cta-text">Parce que toutes les fins méritent un dernier mot mémorable. Crée ta page
                     maintenant, et marque les esprits pour longtemps.</p>
-                <a href="#" className="big-cta-button door-slam-btn">CRÉER MA PAGE THEEND</a>
+                <a href="#" className="big-cta-button door-slam-btn">CRÉER MA PAGE THE END</a>
             </section>
 
             <footer>
                 <div className="footer-content">
-                    <div className="footer-links">
-                        <a href="#">À propos</a>
-                        <a href="#">FAQ</a>
-                        <a href="#">Conditions d'utilisation</a>
-                        <a href="#">Politique de confidentialité</a>
-                        <a href="#">Contact</a>
-                    </div>
 
                     <p className="copyright">© 2025 TheEnd.page - Parce que toutes les fins méritent d'être
                         inoubliables.</p>
