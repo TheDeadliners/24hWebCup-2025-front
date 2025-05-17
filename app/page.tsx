@@ -2,7 +2,6 @@ import "./page.css";
 import Image from 'next/image';
 import React from 'react';
 
-import Navbar from '@/components/Navbar';
 import Link from "next/link";
 
 
@@ -15,7 +14,7 @@ export default function Home() {
                 <nav>
                     <a href="#" className="logo">The<span>End</span>.page</a>
                     <div className="nav-links">
-                        <a href="">Leaderboard</a>
+                        <Link href="/leaderboard">Leaderboard</Link>
                         <a href="#how-it-works">Comment ça marche</a>
                         <a href="#gallery">Exemples</a>
                         <a href="#testimonials">Témoignages</a>
@@ -23,7 +22,7 @@ export default function Home() {
                     <Link href="/login" className="cta-button door-slam-btn hidden md:flex">Créer ma page</Link>
                     <div className="dropdown dropdown-end flex md:hidden">
                         <div tabIndex="0" role="button" className="btn m-1">
-                            <Image src="/img/burger.png" alt="GIF animé porte qui claque" width={50}
+                            <Image src="/images/burger.png" alt="GIF animé porte qui claque" width={50}
                                    height={50}/>
                         </div>
                         <ul tabIndex="0"
@@ -125,7 +124,7 @@ export default function Home() {
 
             <section className="how-it-works" id="how-it-works">
                 <h2 className="section-title">Comment ça marche</h2>
-                <div className="steps gap-x-7 mx-auto max-w-7xl flex flex-col md:flex-wrap justify-center">
+                <div className="steps gap-x-7 mx-auto max-w-7xl flex flex-wrap justify-center">
                     <div className="step">
                         <div className="step-number">1</div>
                         <h3>Choisis ton style</h3>

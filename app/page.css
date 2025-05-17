@@ -402,6 +402,8 @@ h1 .highlight {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    max-width: 350px;
+    min-width: 300px;
 }
 
 .step:hover {
@@ -828,6 +830,14 @@ footer {
 
     h1 {
         font-size: 2.5rem;
+    }
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step {
+        width: 100%;
+        max-width: 600px;
     }
 
     .tagline {
