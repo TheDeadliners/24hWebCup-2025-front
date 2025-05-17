@@ -244,10 +244,6 @@
     display: flex;
   }
 
-  .h-screen {
-    height: 100vh;
-  }
-
   .w-full {
     width: 100%;
   }
@@ -282,10 +278,6 @@
 
   .gap-4 {
     gap: calc(var(--spacing) * 4);
-  }
-
-  .gap-16 {
-    gap: calc(var(--spacing) * 16);
   }
 
   .rounded {
@@ -514,6 +506,20 @@
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+}
+
+:root {
+  --primary: #8a0808;
+  --primary-dark: #9066c7;
+  --dark: #1a1a1a;
+  --dark-accent: #252525;
+  --light: #f9f9f9;
+  --light-accent: #e0e0e0;
+  --accent: #00c9ff;
+  --accent-dark: #00a3d1;
+  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #000 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
 }
 
 @property --tw-border-style {
