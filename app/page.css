@@ -457,6 +457,8 @@ h1 .highlight {
 }
 
 .example-card {
+    background-size: cover;
+    background-position: center;
     height: 280px;
     border-radius: 16px;
     overflow: hidden;
@@ -588,6 +590,10 @@ h1 .highlight {
 .testimonial-author {
     display: flex;
     align-items: center;
+}
+
+.testimonial-author-text {
+    margin-left: 10px;
 }
 
 .author-avatar {

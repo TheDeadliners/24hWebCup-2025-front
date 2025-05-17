@@ -128,25 +128,21 @@ export default function Home() {
             <section className="gallery" id="gallery">
                 <h2 className="section-title">Des départs qui claquent</h2>
                 <div className="examples">
-                    <div className="example-card">
-                        <img src="/api/placeholder/400/250" alt="Exemple de page de démission" className="example-img"/>
+                    <div className="example-card" style={{ backgroundImage: "url('/img/example1.png')" }}>
                         <div className="example-overlay">
                             <h4>Au revoir, startup toxique</h4>
                             <p>Claire a quitté sa startup après 2 ans de promesses non tenues.</p>
                         </div>
                     </div>
 
-                    <div className="example-card">
-                        <img src="/api/placeholder/400/250" alt="Exemple de page de rupture" className="example-img"/>
+                    <div className="example-card" style={{ backgroundImage: "url('/img/example2.png')" }}>
                         <div className="example-overlay">
                             <h4>C'est pas toi, c'est moi</h4>
                             <p>Thomas explique pourquoi il quitte son coloc après 3 ans.</p>
                         </div>
                     </div>
 
-                    <div className="example-card">
-                        <img src="/api/placeholder/400/250" alt="Exemple de page de départ en retraite"
-                             className="example-img"/>
+                    <div className="example-card" style={{ backgroundImage: "url('/img/example3.png')" }}>
                         <div className="example-overlay">
                             <h4>30 ans de service</h4>
                             <p>Bernard part à la retraite en mode passif-agressif.</p>
@@ -163,8 +159,9 @@ export default function Home() {
                             TheEnd est devenue virale dans toute l'entreprise. Le DRH a même dû organiser une réunion
                             d'urgence. Meilleure. Décision. De. Ma. Vie."</p>
                         <div className="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar de Julien" className="author-avatar"/>
-                            <div>
+                            <Image className="rounded-full" src="/img/avatar1.jpg" alt="" width={30}
+                                   height={30} />
+                            <div className="testimonial-author-text">
                                 <div className="author-name">Julien D.</div>
                                 <div className="author-title">Ex-dev fullstack sous-payé</div>
                             </div>
@@ -176,8 +173,9 @@ export default function Home() {
                             TheEnd.page m'a permis d'exprimer tout ce que je n'avais jamais osé dire en face. Libération
                             totale."</p>
                         <div className="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar de Sophie" className="author-avatar"/>
-                            <div>
+                            <Image className="rounded-full" src="/img/avatar2.jpg" alt="" width={30}
+                                   height={30} />
+                            <div className="testimonial-author-text">
                                 <div className="author-name">Sophie M.</div>
                                 <div className="author-title">Cœur maintenant libre</div>
                             </div>
@@ -189,8 +187,9 @@ export default function Home() {
                             messages passifs-agressifs de ma belle-mère. Ma page était tellement drôle que même mon mari
                             a dû admettre que j'avais raison."</p>
                         <div className="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar de Laure" className="author-avatar"/>
-                            <div>
+                            <Image className="rounded-full" src="/img/avatar.jpg" alt="" width={30}
+                                   height={30} />
+                            <div className="testimonial-author-text">
                                 <div className="author-name">Laure T.</div>
                                 <div className="author-title">Belle-fille libérée</div>
                             </div>
@@ -203,18 +202,11 @@ export default function Home() {
                 <h2 className="cta-title">Prêt à claquer la porte ?</h2>
                 <p className="cta-text">Parce que toutes les fins méritent un dernier mot mémorable. Crée ta page
                     maintenant, et marque les esprits pour longtemps.</p>
-                <a href="#" className="big-cta-button door-slam-btn">CRÉER MA PAGE THEEND</a>
+                <a href="#" className="big-cta-button door-slam-btn">CRÉER MA PAGE THE END</a>
             </section>
 
             <footer>
                 <div className="footer-content">
-                    <div className="footer-links">
-                        <a href="#">À propos</a>
-                        <a href="#">FAQ</a>
-                        <a href="#">Conditions d'utilisation</a>
-                        <a href="#">Politique de confidentialité</a>
-                        <Link href="/contact">Contact</Link>
-                    </div>
 
                     <p className="copyright">© 2025 TheEnd.page - Parce que toutes les fins méritent d'être
                         inoubliables.</p>
