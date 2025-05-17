@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":["file:///Users/tepicharme/Developer/NextJS/webcup-2025-front/app/%28root%29/%28backoffice%29/dashboard/page.tsx"],"sourcesContent":["export default function DashboardPage() {\n    return (\n        <>\n            <button className=\"btn btn-primary\">TEST</button>\n\n            <div className=\"\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam beatae deserunt ea earum itaque maxime natus necessitatibus neque obcaecati, quo recusandae, rem repellat sunt ullam velit, vitae voluptate voluptates?</div>\n        </>\n    );\n}\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACpB,qBACI;;0BACI,8OAAC;gBAAO,WAAU;0BAAkB;;;;;;0BAEpC,8OAAC;gBAAI,WAAU;0BAAG;;;;;;;;AAG9B","debugId":null}}]
+}

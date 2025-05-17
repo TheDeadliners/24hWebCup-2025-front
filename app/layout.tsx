@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Lexend} from "next/font/google";
 import "./globals.css";
 import {ReactNode} from "react";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const lexendSans = Lexend({
+    variable: "--font-funnel-sans",
     subsets: ["latin"],
 });
 
@@ -20,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{ children: ReactNode }>) {
     return (
-        <html lang="fr">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <html lang="fr" data-theme="the-end-page">
+        <body className={`${lexendSans.className}`}>
         {children}
         </body>
         </html>

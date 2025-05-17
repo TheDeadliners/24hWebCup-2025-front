@@ -19,7 +19,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -578,7 +577,6 @@ h1 .highlight {
     font-size: 5rem;
     color: var(--primary);
     opacity: 0.3;
-    font-family: Georgia, serif;
     line-height: 1;
 }
 
