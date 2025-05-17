@@ -1,15 +1,11 @@
 @import "tailwindcss";
-:root {
-    --primary: #8a0808;
-    --primary-dark: #9066c7;
-    --dark: #1a1a1a;
-    --dark-accent: #252525;
-    --light: #f9f9f9;
-    --light-accent: #e0e0e0;
-    --accent: #00c9ff;
-    --accent-dark: #00a3d1;
-    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #000000 100%);
-    --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+    name: "custom";
+    default: true;
+    --color-primary: blue;
+    --color-accent: purple;
+    --color-success: green;
+    --color-warning: yellow;
+    --color-error: red;
 }
-
