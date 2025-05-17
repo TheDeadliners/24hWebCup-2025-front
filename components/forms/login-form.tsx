@@ -78,7 +78,7 @@ export default function LoginForm() {
                     <fieldset className="fieldset">
                         <div className="mx-auto">
                             <button className="btn btn-primary" type={submitState ? "submit" : "button"} disabled={!submitState}>
-                                {submitState ? "Connexion" : <><SpinnerIcon className="icon animate-spin"/></>}
+                                {submitState ? "Connexion" : <><SpinnerIcon weight="bold" className="icon animate-spin"/></>}
                             </button>
                         </div>
                     </fieldset>

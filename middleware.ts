@@ -4,7 +4,7 @@ import {check} from "@/libs/actions/authentication";
 export async function middleware(req : NextRequest) {
 
     if (req.nextUrl.pathname != '/') {
-        if (req.nextUrl.pathname == "/login" || req.nextUrl.pathname == "/register" || req.nextUrl.pathname == "/forgot-password" || req.nextUrl.pathname == "/reset-password") {
+        if (req.nextUrl.pathname == "/login" || req.nextUrl.pathname == "/register" || req.nextUrl.pathname == "/forgot-password" || req.nextUrl.pathname == "/reset-password" || req.nextUrl.pathname == "/leaderboard") {
             if (await check()) {
                 return NextResponse.redirect(new URL("/dashboard", req.nextUrl.origin));
             }

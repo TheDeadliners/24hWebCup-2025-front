@@ -1,7 +1,6 @@
 'use client';
 
-import "./leaderboard.css";
-import Image from 'next/image';
+import "./page.css";
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 
@@ -123,7 +122,7 @@ export default function Leaderboard() {
         : topPages.filter(page => page.category.toLowerCase() === activeFilter.toLowerCase());
 
     // Voter pour une page
-    const votePage = (id) => {
+    const votePage = (id: number) => {
         setTopPages(prevPages =>
             prevPages.map(page =>
                 page.id === id
@@ -256,7 +255,7 @@ export default function Leaderboard() {
 
             <footer>
                 <div className="footer-content">
-                    <p className="copyright">© 2025 TheEnd.page - Parce que toutes les fins méritent d'être
+                    <p className="copyright">© 2025 TheEnd.page - Parce que toutes les fins méritent d&apos;être
                         inoubliables.</p>
                 </div>
             </footer>

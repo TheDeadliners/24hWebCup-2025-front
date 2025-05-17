@@ -40,6 +40,25 @@
     body {
         @apply antialiased;
     }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: var(--light);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.5px;
+        transition: transform 0.3s;
+    }
+
+    .logo:hover {
+        transform: scale(1.05);
+    }
+
+    .logo span {
+        @apply italic text-primary
+    }
 }
 
 @layer utilities {
@@ -55,7 +74,7 @@
         @apply bg-gradient-to-br from-rose-300 to-error;
     }
 
-    .btn-success, .alert-success {
+    .btn-success, .alert-success, .badge-success {
         @apply bg-gradient-to-br from-lime-300 to-success;
     }
 
@@ -63,7 +82,11 @@
         @apply font-bold text-base;
     }
 
-    .card {
+    .modal.modal-open {
+        @apply bg-black;
+    }
+
+    .card, .modal-box {
         @apply bg-white/5 border border-white/10;
     }
 
@@ -85,5 +108,9 @@
 
     .form-error {
         @apply flex justify-start items-center gap-2.5 text-rose-400 text-sm
+    }
+
+    .navbar-start, .navbar-end {
+        @apply px-6
     }
 }

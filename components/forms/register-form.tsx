@@ -109,7 +109,7 @@ export default function RegisterForm() {
                     <fieldset className="fieldset">
                         <div className="mx-auto">
                             <button className="btn btn-primary" type={submitState ? "submit" : "button"} disabled={!submitState}>
-                                {submitState ? "Inscription" : <><SpinnerIcon className="icon animate-spin"/></>}
+                                {submitState ? "Inscription" : <><SpinnerIcon weight="bold" className="icon animate-spin"/></>}
                             </button>
                         </div>
                     </fieldset>
