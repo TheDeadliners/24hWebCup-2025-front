@@ -20,12 +20,12 @@
     --color-neutral-content: oklch(100% 0 0);
     --color-info: oklch(93% 0.032 255.585);
     --color-info-content: oklch(28% 0.091 267.935);
-    --color-success: oklch(96% 0.067 122.328);
-    --color-success-content: oklch(27% 0.072 132.109);
+    --color-success: oklch(84.1% 0.238 128.85);
+    --color-success-content: oklch(100% 0 0);
     --color-warning: oklch(95% 0.038 75.164);
     --color-warning-content: oklch(26% 0.079 36.259);
-    --color-error: oklch(93% 0.032 17.717);
-    --color-error-content: oklch(25% 0.092 26.042);
+    --color-error: oklch(64.5% 0.246 16.439);
+    --color-error-content: oklch(100% 0 0);
     --radius-selector: 2rem;
     --radius-field: 2rem;
     --radius-box: 2rem;
@@ -45,5 +45,45 @@
 @layer utilities {
     .btn-primary {
         @apply bg-gradient-to-br from-primary to-accent;
+    }
+
+    .alert {
+        @apply font-semibold justify-center;
+    }
+
+    .btn-error, .alert-error {
+        @apply bg-gradient-to-br from-rose-300 to-error;
+    }
+
+    .btn-success, .alert-success {
+        @apply bg-gradient-to-br from-lime-300 to-success;
+    }
+
+    .btn {
+        @apply font-bold text-base;
+    }
+
+    .card {
+        @apply bg-white/5 border border-white/10;
+    }
+
+    .card-title {
+        @apply font-black text-primary text-2xl;
+    }
+
+    .input {
+        @apply text-base w-full bg-white/5;
+    }
+
+    .alert, .table {
+        @apply text-base;
+    }
+
+    .fieldset, .stat-title {
+        @apply text-base;
+    }
+
+    .form-error {
+        @apply flex justify-start items-center gap-2.5 text-rose-400 text-sm
     }
 }

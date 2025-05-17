@@ -16,19 +16,19 @@ export default function Home() {
                     <div className="bg-circle circle-1"></div>
                     <div className="bg-circle circle-2"></div>
                     <div className="floating-gif gif-1">
-                        <Image src="/img/leave.png" alt="GIF animé porte qui claque" width={200}
+                        <Image src="/images/leave.png" alt="GIF animé porte qui claque" width={200}
                                height={200} />
                     </div>
                     <div className="floating-gif gif-2">
-                        <Image src="/img/masque.png" alt="GIF animé au revoir" width={200}
+                        <Image src="/images/masque.png" alt="GIF animé au revoir" width={200}
                                height={200} />
                     </div>
                     <div className="floating-gif gif-3">
-                        <Image src="/img/exit.png" alt="GIF animé dramatique" width={200}
+                        <Image src="/images/exit.png" alt="GIF animé dramatique" width={200}
                                height={200} />
                     </div>
                     <div className="floating-gif gif-4">
-                        <Image src="/img/heart.png" alt="GIF animé dramatique" width={200}
+                        <Image src="/images/heart.png" alt="GIF animé dramatique" width={200}
                                height={200} />
                     </div>
                 </div>
@@ -128,21 +128,21 @@ export default function Home() {
             <section className="gallery" id="gallery">
                 <h2 className="section-title">Des départs qui claquent</h2>
                 <div className="examples">
-                    <div className="example-card" style={{ backgroundImage: "url('/img/example1.png')" }}>
+                    <div className="example-card" style={{ backgroundImage: "url('/images/example1.png')" }}>
                         <div className="example-overlay">
                             <h4>Au revoir, startup toxique</h4>
                             <p>Claire a quitté sa startup après 2 ans de promesses non tenues.</p>
                         </div>
                     </div>
 
-                    <div className="example-card" style={{ backgroundImage: "url('/img/example2.png')" }}>
+                    <div className="example-card" style={{ backgroundImage: "url('/images/example2.png')" }}>
                         <div className="example-overlay">
                             <h4>C'est pas toi, c'est moi</h4>
                             <p>Thomas explique pourquoi il quitte son coloc après 3 ans.</p>
                         </div>
                     </div>
 
-                    <div className="example-card" style={{ backgroundImage: "url('/img/example3.png')" }}>
+                    <div className="example-card" style={{ backgroundImage: "url('/images/example3.png')" }}>
                         <div className="example-overlay">
                             <h4>30 ans de service</h4>
                             <p>Bernard part à la retraite en mode passif-agressif.</p>
@@ -159,7 +159,7 @@ export default function Home() {
                             TheEnd est devenue virale dans toute l'entreprise. Le DRH a même dû organiser une réunion
                             d'urgence. Meilleure. Décision. De. Ma. Vie."</p>
                         <div className="testimonial-author">
-                            <Image className="rounded-full" src="/img/avatar1.jpg" alt="" width={30}
+                            <Image className="rounded-full" src="/images/avatar1.jpg" alt="" width={30}
                                    height={30} />
                             <div className="testimonial-author-text">
                                 <div className="author-name">Julien D.</div>
@@ -173,7 +173,7 @@ export default function Home() {
                             TheEnd.page m'a permis d'exprimer tout ce que je n'avais jamais osé dire en face. Libération
                             totale."</p>
                         <div className="testimonial-author">
-                            <Image className="rounded-full" src="/img/avatar2.jpg" alt="" width={30}
+                            <Image className="rounded-full" src="/images/avatar2.jpg" alt="" width={30}
                                    height={30} />
                             <div className="testimonial-author-text">
                                 <div className="author-name">Sophie M.</div>
@@ -187,7 +187,7 @@ export default function Home() {
                             messages passifs-agressifs de ma belle-mère. Ma page était tellement drôle que même mon mari
                             a dû admettre que j'avais raison."</p>
                         <div className="testimonial-author">
-                            <Image className="rounded-full" src="/img/avatar.jpg" alt="" width={30}
+                            <Image className="rounded-full" src="/images/avatar.jpg" alt="" width={30}
                                    height={30} />
                             <div className="testimonial-author-text">
                                 <div className="author-name">Laure T.</div>
