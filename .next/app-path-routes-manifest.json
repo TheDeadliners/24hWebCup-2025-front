@@ -1,11 +1,11 @@
 {
   "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
-  "/leaderboard/page": "/leaderboard",
   "/page": "/",
-  "/(root)/(auth)/forgot-password/page": "/forgot-password",
+  "/leaderboard/page": "/leaderboard",
+  "/(root)/(backoffice)/dashboard/page": "/dashboard",
   "/(root)/(auth)/reset-password/page": "/reset-password",
-  "/(root)/(auth)/register/page": "/register",
+  "/(root)/(auth)/forgot-password/page": "/forgot-password",
   "/(root)/(auth)/login/page": "/login",
-  "/(root)/(backoffice)/dashboard/page": "/dashboard"
+  "/(root)/(auth)/register/page": "/register"
 }
