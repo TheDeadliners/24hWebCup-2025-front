@@ -1,6 +1,4 @@
 import {getUserData, UserData} from "@/libs/actions/session";
-import {List} from "@phosphor-icons/react/dist/ssr";
-import Image from "next/image";
 import React from "react";
 import LogoutModal from "@/components/controls/backoffice/logout-modal";
 import {UserCircleIcon} from "@phosphor-icons/react/dist/ssr";

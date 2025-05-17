@@ -1,18 +1,18 @@
 "use client";
 
-import React, {useState} from "react";
+import React, {Suspense, useState} from "react";
 import {LoginData, LoginSchema} from "@/libs/schemas/login";
 import {Controller, useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {EyeIcon, EyeSlashIcon, SpinnerIcon, WarningIcon} from "@phosphor-icons/react";
 import {login} from "@/libs/actions/authentication";
-import {redirect, useSearchParams} from "next/navigation";
+import {redirect} from "next/navigation";
 import toast from "react-hot-toast";
+import SessionExpiredNotice from "@/components/controls/SessionExpiredNotice";
 
 export default function LoginForm() {
     const [isPasswordClearText, setPasswordClearText] = useState<boolean>(false);
     const [submitState, setSubmitState] = useState<boolean>(true);
-    const params = useSearchParams();
 
     const toggleClearPassword = () => {
         setPasswordClearText(!isPasswordClearText);
@@ -85,13 +85,9 @@ export default function LoginForm() {
                 </div>
             </section>
 
-            { params.get("redirect") == "not-logged-in" ? (
-                <div className="fieldset mt-2 p-5">
-                    <div className="alert alert-error">
-                        Votre session a expiré.
-                    </div>
-                </div>
-            ) : null }
+            <Suspense fallback={null}>
+                <SessionExpiredNotice />
+            </Suspense>
         </form>
     );
 }
