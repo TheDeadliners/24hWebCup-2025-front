@@ -1,15 +1,42 @@
+'use client';
+
 import "./page.css";
 import Image from 'next/image';
+import React from 'react';
 
-import Navbar from '@/components/Navbar';
 import Link from "next/link";
-
 
 export default function Home() {
     return (
         <main className="w-full">
             <div className="noise"></div>
-            <Navbar />
+
+            <header>
+                <nav>
+                    <a href="#" className="logo">The<span>End</span>.page</a>
+                    <div className="nav-links">
+                        <a href="">Leaderboard</a>
+                        <a href="#how-it-works">Comment ça marche</a>
+                        <a href="#gallery">Exemples</a>
+                        <a href="#testimonials">Témoignages</a>
+                    </div>
+                    <Link href="/login" className="cta-button door-slam-btn hidden md:flex">Créer ma page</Link>
+                    <div className="dropdown dropdown-end flex md:hidden">
+                        <div tabIndex="0" role="button" className="btn m-1">
+                            <Image src="/img/burger.png" alt="GIF animé porte qui claque" width={50}
+                                   height={50}/>
+                        </div>
+                        <ul tabIndex="0"
+                            className="dropdown-content menu bg-base-200 rounded-box top-[50px] z-1 w-52 p-2 shadow-sm"
+                            id="nav-dropdown">
+                            <li className="nav-dropdown-link"><a>Leaderboard</a></li>
+                            <li className="nav-dropdown-link"><a>Comment ça marche</a></li>
+                            <li className="nav-dropdown-link"><a>Exemples</a></li>
+                            <li className="nav-dropdown-link"><a>Témoignages</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
 
             <section className="hero">
                 <div className="bg-elements">
@@ -17,7 +44,7 @@ export default function Home() {
                     <div className="bg-circle circle-2"></div>
                     <div className="floating-gif gif-1">
                         <Image src="/img/leave.png" alt="GIF animé porte qui claque" width={200}
-                               height={200} />
+                               height={200}/>
                     </div>
                     <div className="floating-gif gif-2">
                         <Image src="/img/masque.png" alt="GIF animé au revoir" width={200}
@@ -98,7 +125,7 @@ export default function Home() {
 
             <section className="how-it-works" id="how-it-works">
                 <h2 className="section-title">Comment ça marche</h2>
-                <div className="steps gap-x-7 mx-auto min-w-7xl flex justify-center">
+                <div className="steps gap-x-7 mx-auto max-w-7xl flex flex-col md:flex-wrap justify-center">
                     <div className="step">
                         <div className="step-number">1</div>
                         <h3>Choisis ton style</h3>

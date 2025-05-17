@@ -3,7 +3,6 @@ import {Lexend} from "next/font/google";
 import "./globals.css";
 import {ReactNode} from "react";
 
-
 const lexendSans = Lexend({
     variable: "--font-funnel-sans",
     subsets: ["latin"],
