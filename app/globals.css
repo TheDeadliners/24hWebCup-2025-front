@@ -46,7 +46,4 @@
     .btn-primary {
         @apply bg-gradient-to-br from-primary to-accent;
     }
-    .btn-primary2 {
-        @apply bg-gradient-to-bl from-primary to-accent;
-    }
 }
