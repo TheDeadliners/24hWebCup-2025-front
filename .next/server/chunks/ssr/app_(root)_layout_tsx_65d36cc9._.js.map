@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/babas/Documents/Projets/24hWebCup-2025-front/app/%28root%29/layout.tsx"],"sourcesContent":["import {ReactNode} from \"react\";\r\n\r\nexport default function RootLayout({children}: Readonly<{ children: ReactNode }>) {\r\n    return (\r\n        <>{children}</>\r\n    );\r\n}\r\n"],"names":[],"mappings":";;;;;AAEe,SAAS,WAAW,EAAC,QAAQ,EAAoC;IAC5E,qBACI;kBAAG;;AAEX","debugId":null}}]
+}
