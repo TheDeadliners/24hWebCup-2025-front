@@ -7,8 +7,6 @@ import Link from "next/link";
 export default async function Header() {
     const userData: UserData = await getUserData() as UserData;
 
-
-
     return (
         <>
             <div className="hidden md:flex navbar shadow-sm py-6">

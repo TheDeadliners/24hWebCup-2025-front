@@ -11,12 +11,14 @@ export type JwtTokenData = {
     username: string,
     firstname: string,
     lastname: string,
+    created_at: string
 };
 
 export type UserData = {
     firstname: string,
     lastname: string,
-    username: string
+    username: string,
+    created_at: string
 };
 
 export async function createSession(jwtToken: string): Promise<void> {
@@ -63,6 +65,7 @@ export async function getUserData(): Promise<UserData | undefined> {
             firstname: details.firstname,
             lastname: details.lastname,
             username: details.username,
+            created_at: details.created_at,
         };
     } else {
         return undefined;
