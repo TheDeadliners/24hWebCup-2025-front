@@ -1,0 +1,73 @@
+/* Header & Navigation */
+header {
+    padding: 1.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(21, 21, 21, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}

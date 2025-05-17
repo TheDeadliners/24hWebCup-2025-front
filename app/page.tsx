@@ -1,42 +1,39 @@
 import "./page.css";
+import Image from 'next/image';
+
+import Navbar from '@/components/Navbar';
+import Link from "next/link";
+
 
 export default function Home() {
     return (
-        <main>
+        <main className="w-full">
             <div className="noise"></div>
-
-            <header>
-                <nav>
-                    <a href="#" className="logo">The<span>End</span>.page</a>
-                    <div className="nav-links">
-                        <a href="#features">Styles</a>
-                        <a href="#how-it-works">Comment ça marche</a>
-                        <a href="#gallery">Exemples</a>
-                        <a href="#testimonials">Témoignages</a>
-                    </div>
-                    <a href="#create" className="cta-button door-slam-btn">Créer ma page</a>
-                </nav>
-            </header>
+            <Navbar />
 
             <section className="hero">
                 <div className="bg-elements">
                     <div className="bg-circle circle-1"></div>
                     <div className="bg-circle circle-2"></div>
                     <div className="floating-gif gif-1">
-                        <img src="/leave.png" alt="GIF animé porte qui claque"/>
+                        <Image src="/img/leave.png" alt="GIF animé porte qui claque" width={200}
+                               height={200} />
                     </div>
                     <div className="floating-gif gif-2">
-                        <img src="/masque.png" alt="GIF animé au revoir"/>
+                        <Image src="/img/masque.png" alt="GIF animé au revoir" width={200}
+                               height={200} />
                     </div>
                     <div className="floating-gif gif-3">
-                        <img src="/exit.png" alt="GIF animé dramatique"/>
+                        <Image src="/img/exit.png" alt="GIF animé dramatique" width={200}
+                               height={200} />
                     </div>
                     <div className="floating-gif gif-4">
-                        <img src="/heart.png" alt="GIF animé dramatique"/>
+                        <Image src="/img/heart.png" alt="GIF animé dramatique" width={200}
+                               height={200} />
                     </div>
                 </div>
 
-                <div className="hero-content">
+                <div className="hero-content flex flex-col">
                     <h1>Claque la porte avec <span className="highlight glitch-effect" data-text="style">style</span>
                     </h1>
                     <p className="tagline">Créez votre page de départ mémorable - pour quitter votre job, votre couple,
@@ -101,7 +98,7 @@ export default function Home() {
 
             <section className="how-it-works" id="how-it-works">
                 <h2 className="section-title">Comment ça marche</h2>
-                <div className="steps">
+                <div className="steps gap-x-7 mx-auto min-w-7xl flex justify-center">
                     <div className="step">
                         <div className="step-number">1</div>
                         <h3>Choisis ton style</h3>
@@ -216,7 +213,7 @@ export default function Home() {
                         <a href="#">FAQ</a>
                         <a href="#">Conditions d'utilisation</a>
                         <a href="#">Politique de confidentialité</a>
-                        <a href="#">Contact</a>
+                        <Link href="/contact">Contact</Link>
                     </div>
 
                     <p className="copyright">© 2025 TheEnd.page - Parce que toutes les fins méritent d'être
