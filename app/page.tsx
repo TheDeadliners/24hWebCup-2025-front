@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
@@ -8,7 +8,6 @@ import AOS from 'aos';
 
 export default function Home() {
     // État pour gérer le menu sur mobile
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     useEffect(() => {
         AOS.init({
             duration: 800, // durée par défaut de l'animation (en ms)
