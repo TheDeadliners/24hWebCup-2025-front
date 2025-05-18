@@ -27,7 +27,8 @@ export default function Home() {
                  data-aos-duration="1500" className="navbar bg-base-100 shadow-sm pt-5 pb-4">
                 <div className="navbar-start text-white">
 
-                    <a className="btn btn-ghost text-xl"><Image src="/images/logo.svg" alt="Logo Officielle" width={150} height={150}/></a>
+                    <a className="hidden md:flex btn btn-ghost text-xl"><Image src="/images/logo.svg" alt="Logo Officielle" width={128} height={128}/></a>
+                    <a className="flex md:hidden btn btn-ghost text-xl"><Image src="/images/logo.svg" alt="Logo Officielle" width={96} height={96}/></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -38,26 +39,12 @@ export default function Home() {
                         <li><Link href="/#testimonials" className="font-semibold">Témoignages</Link></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-2">
                     <Link href="/login" className="btn btn-primary hidden md:flex">
                         Créer ma EndPage
                     </Link>
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <Link href="/" className="logo">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-                            </Link>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><Link href="/" className="font-semibold text-primary">Accueil</Link></li>
-                            <li><Link href="/leaderboard" className="font-semibold">Leaderboard</Link></li>
-                            <li><Link href="/#how-it-works" className="font-semibold">Comment ça marche</Link></li>
-                            <li><Link href="/#gallery" className="font-semibold">Exemples</Link></li>
-                            <li><Link href="/#testimonials" className="font-semibold">Témoignages</Link></li>
-                        </ul>
-                    </div>
+
+                    <Link className="btn btn-primary" href="/leaderboard">Leaderboard</Link>
                 </div>
             </div>
             {/* Hero Section */}

@@ -97,7 +97,6 @@ const Leaderboard: React.FC = () => {
     const [pages, setPages] = useState<LeaderboardPage[]>(initialPages);
     const [filteredPages, setFilteredPages] = useState<LeaderboardPage[]>(initialPages);
     const [activeFilter, setActiveFilter] = useState<string>('all');
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     // Filtrer les pages selon la catégorie sélectionnée
     useEffect(() => {
@@ -162,23 +161,7 @@ const Leaderboard: React.FC = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <Link href="/" className="logo">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-                            </Link>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1000 mt-3 w-52 p-2 shadow">
-                            <li><Link href="/" className="font-semibold">Accueil</Link></li>
-                            <li><Link href="/leaderboard" className="font-semibold text-primary">Leaderboard</Link></li>
-                            <li><Link href="/#how-it-works" className="font-semibold">Comment ça marche</Link></li>
-                            <li><Link href="/#gallery" className="font-semibold">Exemples</Link></li>
-                            <li><Link href="/#testimonials" className="font-semibold">Témoignages</Link></li>
-                        </ul>
-                    </div>
-                    <Link href="/login" className="btn btn-primary hidden md:flex">
+                    <Link href="/login" className="btn btn-primary">
                         Créer ma EndPage
                     </Link>
                 </div>
