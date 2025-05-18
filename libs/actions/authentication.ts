@@ -7,6 +7,8 @@ import {decodeJwt} from "jose";
 import {AccountData} from "@/libs/schemas/account";
 import {PasswordData} from "@/libs/schemas/password";
 import {RegisterData} from "@/libs/schemas/register";
+import {ForgotData} from "@/libs/schemas/forgot";
+import {ResetData} from "@/libs/schemas/reset";
 
 const BASE_URL = `${process.env.NEXT_PUBLIC_API_URL}/auth`;
 
@@ -58,6 +60,43 @@ export async function login(loginData: LoginData): Promise<AuthenticationRespons
     }
 }
 
+export async function forgot(forgotData: ForgotData): Promise<AuthenticationResponse> {
+    try {
+        const forgotResponse =  await axios.post(`${BASE_URL}/forgot-password`, forgotData, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        })
+
+        if (forgotResponse.status === 200) {
+            return {
+                code: "FORGOT_SUCCEED",
+                message: forgotResponse.data.message
+            }
+        } else {
+            return {
+                code: "FORGOT_FAILED",
+                message: forgotResponse.data.message
+            }
+        }
+    } catch (error) {
+        const axiosError = error as AxiosError;
+        if (axiosError.code == "ECONNREFUSED") {
+            return {
+                code: "FORGOT_ERROR",
+                message: `Erreur : L'API est injoignable.`
+            }
+        } else {
+            const responseError = axiosError.response as AxiosResponse;
+            return {
+                code: "FORGOT_ERROR",
+                message: `Erreur : ${responseError.data?.message ?? axiosError.code}`
+            }
+        }
+    }
+}
+
 export async function register(registerData: RegisterData): Promise<AuthenticationResponse> {
     try {
         const registerResponse =  await axios.post(`${BASE_URL}/register`, registerData, {
@@ -89,6 +128,43 @@ export async function register(registerData: RegisterData): Promise<Authenticati
             const responseError = axiosError.response as AxiosResponse;
             return {
                 code: "REGISTER_ERROR",
+                message: `Erreur : ${responseError.data?.message ?? axiosError.code}`
+            }
+        }
+    }
+}
+
+export async function reset(resetData: ResetData): Promise<AuthenticationResponse> {
+    try {
+        const registerResponse =  await axios.post(`${BASE_URL}/reset-password`, resetData, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        })
+
+        if (registerResponse.status === 200) {
+            return {
+                code: "RESET_SUCCEED",
+                message: registerResponse.data.message
+            }
+        } else {
+            return {
+                code: "RESET_FAILED",
+                message: registerResponse.data.message
+            }
+        }
+    } catch (error) {
+        const axiosError = error as AxiosError;
+        if (axiosError.code == "ECONNREFUSED") {
+            return {
+                code: "RESET_ERROR",
+                message: `Erreur : L'API est injoignable.`
+            }
+        } else {
+            const responseError = axiosError.response as AxiosResponse;
+            return {
+                code: "RESET_ERROR",
                 message: `Erreur : ${responseError.data?.message ?? axiosError.code}`
             }
         }

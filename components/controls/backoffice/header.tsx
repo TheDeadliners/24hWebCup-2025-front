@@ -1,27 +1,35 @@
 import {getUserData, UserData} from "@/libs/actions/session";
 import React from "react";
 import LogoutModal from "@/components/controls/backoffice/logout-modal";
-import {UserCircleIcon} from "@phosphor-icons/react/dist/ssr";
+import {UserCircleIcon, HouseIcon} from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Header() {
     const userData: UserData = await getUserData() as UserData;
 
-
-
     return (
         <>
-            <div className="navbar shadow-sm py-6">
-                <div className="navbar-start">
-                    <Link href="" className="btn">
-                        <UserCircleIcon size={32} weight="bold" className="h-6 w-6" /> <span className="hidden md:flex">Profil</span>
+            <div className="hidden md:flex navbar shadow-sm py-6">
+                <div className="navbar-start gap-2">
+                    <Link href="/account" className="btn">
+                        <UserCircleIcon weight="bold" className="h-6 w-6" /> <span className="hidden md:flex">Profil</span>
+                    </Link>
+                    <Link href="/dashboard" className="btn">
+                        <HouseIcon weight="bold" className="h-6 w-6" /> <span className="hidden md:flex">Menu</span>
                     </Link>
                 </div>
                 <div className="navbar-center">
-                    <a href="#" className="logo">The<span>End</span>.page</a>
+                    <Image src="/images/logo.svg" alt="TheEndPage logo" priority={true} width={116} height={116}/>
                 </div>
                 <div className="navbar-end">
                     <LogoutModal userData={userData} />
+                </div>
+            </div>
+
+            <div className="flex md:hidden navbar shadow-sm py-6">
+                <div className="navbar-center justify-center w-full gap-2">
+                    <Image src="/images/logo.svg" alt="TheEndPage logo" priority={true} width={124} height={124}/>
                 </div>
             </div>
         </>

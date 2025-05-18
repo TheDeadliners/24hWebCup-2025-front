@@ -1,10 +1,6 @@
-import Header from "@/components/controls/backoffice/header";
-import Footer from "@/components/controls/backoffice/footer";
-
 export default function DashboardPage() {
     return (
         <>
-            <Header></Header>
             <div className="min-h-screen">
                 <div className="flex justify-center pt-4">
                     <div className="stats shadow-lg border-1 border-black rounded-box flex flex-col sm:flex-row">
@@ -75,7 +71,6 @@ export default function DashboardPage() {
                     <button className="btn btn-outline btn-neutral mx-2">Publier un brouillon</button>
                 </div>
             </div>
-            <Footer></Footer>
         </>
     );
 }

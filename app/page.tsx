@@ -266,7 +266,7 @@ export default function Home() {
 
                 <div className="max-w-4xl mx-auto space-y-8">
                     <div className="card relative">
-                        <div className="absolute -top-5 left-6 text-8xl text-primary opacity-20 font-serif">"</div>
+                        <div className="absolute -top-5 left-6 text-8xl text-primary opacity-20 font-serif">&quot;</div>
                         <div className="card-body">
                             <p className="italic mb-4">J&apos;ai quitté mon job après 5 ans sans augmentation. Ma page TheEnd est devenue virale dans toute l&apos;entreprise. Le DRH a même dû organiser une réunion d&apos;urgence. Meilleure. Décision. De. Ma. Vie.</p>
                             <div className="flex items-center">
@@ -284,7 +284,7 @@ export default function Home() {
                     </div>
 
                     <div className="card relative">
-                        <div className="absolute -top-5 left-6 text-8xl text-primary opacity-20 font-serif">"</div>
+                        <div className="absolute -top-5 left-6 text-8xl text-primary opacity-20 font-serif">&quot;</div>
                         <div className="card-body">
                             <p className="italic mb-4">J&apos;avais besoin de fermer ce chapitre de ma vie avec mon ex. TheEnd.page m&apos;a permis d&apos;exprimer tout ce que je n&apos;avais jamais osé dire en face. Libération totale.</p>
                             <div className="flex items-center">
@@ -302,7 +302,7 @@ export default function Home() {
                     </div>
 
                     <div className="card relative">
-                        <div className="absolute -top-5 left-6 text-8xl text-primary opacity-20 font-serif">"</div>
+                        <div className="absolute -top-5 left-6 text-8xl text-primary opacity-20 font-serif">&quot;</div>
                         <div className="card-body">
                             <p className="italic mb-4">J&apos;ai quitté le groupe WhatsApp familial toxique après 4 ans de messages passifs-agressifs de ma belle-mère. Ma page était tellement drôle que même mon mari a dû admettre que j&apos;avais raison.</p>
                             <div className="flex items-center">
