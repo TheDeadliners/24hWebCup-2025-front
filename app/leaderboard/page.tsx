@@ -133,6 +133,8 @@ export default async function LeaderboardPage() {
                                         src={`/images/${page.background}`}
                                         alt={page.title}
                                         className="object-cover"
+                                        width={64}
+                                        height={64}
                                     />
                                     <div className="badge badge-sm absolute bottom-2 right-2 bg-base-100/70 backdrop-blur-sm text-primary border-primary">
                                         {page.category}
