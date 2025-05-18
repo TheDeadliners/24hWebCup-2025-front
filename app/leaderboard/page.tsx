@@ -129,11 +129,11 @@ export default async function LeaderboardPage() {
                                 {renderRankBadge(index)}
 
                                 <figure className="relative h-48">
-                                    {/*<Image*/}
-                                    {/*    src={page.image}*/}
-                                    {/*    alt={page.title}*/}
-                                    {/*    className="object-cover"*/}
-                                    {/*/>*/}
+                                    <Image
+                                        src={`/images/${page.background}`}
+                                        alt={page.title}
+                                        className="object-cover"
+                                    />
                                     <div className="badge badge-sm absolute bottom-2 right-2 bg-base-100/70 backdrop-blur-sm text-primary border-primary">
                                         {page.category}
                                     </div>
