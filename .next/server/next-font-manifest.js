@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/tepicharme/Developer/NextJS/webcup-2025-front/app/layout":["static/media/84455f2b5a591033-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
