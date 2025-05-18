@@ -1,13 +1,13 @@
 import {EyesIcon, HeartIcon, PencilLineIcon} from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
-import {getMines, getStats} from "@/libs/actions/endpages";
+import {EndPage, getMines, getStats, LeaderBoardResponse} from "@/libs/actions/endpages";
 
 export default async function DashboardPage() {
 
     const leaderboardStats = await getStats();
-    const myEndPages = await getMines();
+    const myEndPages: LeaderBoardResponse = await getMines();
 
-    console.log(myEndPages.data)
+    const myData = myEndPages.data as EndPage[]
     return (
         <>
             <div className="min-h-screen">
@@ -45,7 +45,7 @@ export default async function DashboardPage() {
                 </div>
 
                 <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {myEndPages.data?.map((page, index) => (
+                    { myData.length > 0 ? myData?.map((page, index) => (
                         <div key={index} className="card shadow-xl p-4">
                             <div className="card-title uppercase">
                                 {page.category}
@@ -59,7 +59,7 @@ export default async function DashboardPage() {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    )) : null}
                 </div>
             </div>
         </>

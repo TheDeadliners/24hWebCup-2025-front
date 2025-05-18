@@ -2,14 +2,14 @@
   "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
   "/leaderboard/page": "/leaderboard",
-  "/this-is-the-end/[id]/page": "/this-is-the-end/[id]",
   "/page": "/",
+  "/this-is-the-end/[id]/page": "/this-is-the-end/[id]",
   "/(root)/(auth)/forgot-password/page": "/forgot-password",
   "/(root)/(auth)/login/page": "/login",
-  "/(root)/(auth)/register/page": "/register",
   "/(root)/(auth)/reset-password/page": "/reset-password",
+  "/(root)/(auth)/register/page": "/register",
+  "/(root)/(backoffice)/account/edit/page": "/account/edit",
   "/(root)/(backoffice)/account/page": "/account",
   "/(root)/(backoffice)/create/page": "/create",
-  "/(root)/(backoffice)/dashboard/page": "/dashboard",
-  "/(root)/(backoffice)/account/edit/page": "/account/edit"
+  "/(root)/(backoffice)/dashboard/page": "/dashboard"
 }
