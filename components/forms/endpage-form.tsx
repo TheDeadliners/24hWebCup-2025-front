@@ -12,10 +12,6 @@ import {redirect} from "next/navigation";
 
 export default function EndPageForm() {
     const [submitState, setSubmitState] = useState<boolean>(true);
-    const [backgroundState, setBackgroundState] = useState<string>("absurd.jpg");
-    const [categoryState, setCategoryState] = useState<string>("ABSURDE");
-    const [gifState, setGifState] = useState<string>("https://media.giphy.com/media/F0fnMTynQfFUrpbZA1/giphy.gif?cid=ecf05e47xqt7ivx1biknj0bf58t1lnr5qk5b7g6me6c0zcz5&ep=v1_gifs_search&rid=giphy.gif&ct=g",);
-
 
     const categories = [
         "ABSURDE",
@@ -55,17 +51,14 @@ export default function EndPageForm() {
     });
 
     function handleBackgroundChange(event: ChangeEvent<HTMLInputElement>) {
-        setBackgroundState(event.target.value);
         endpageForm.setValue("background", event.target.value);
     }
 
     function handleGifChange(event: ChangeEvent<HTMLInputElement>) {
-        setGifState(event.target.value);
         endpageForm.setValue("gif", event.target.value);
     }
 
     function handleCategoryChange(event: ChangeEvent<HTMLInputElement>) {
-        setGifState(event.target.value);
         endpageForm.setValue("gif", event.target.value);
     }
 
