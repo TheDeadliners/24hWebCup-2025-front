@@ -154,7 +154,7 @@ export async function view(viewId: string): Promise<EndPageResponse> {
         if (passwordResponse.status === 200) {
             return {
                 code: "REQUEST_SUCCEED",
-                message: passwordResponse.data
+                data: passwordResponse.data
             }
         } else {
             return {
