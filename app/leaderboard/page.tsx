@@ -294,8 +294,8 @@ const Leaderboard: React.FC = () => {
                             Créez votre page de sortie mémorable et laissez la communauté voter pour vous propulser dans notre Hall of Fame.
                         </p>
                         <div className="card-actions justify-center">
-                            <Link href="/create" className="btn btn-primary btn-lg">
-                                CRÉER MA PAGE LÉGENDAIRE
+                            <Link href="/login" className="btn btn-primary btn-lg">
+                                CRÉER MA LÉGENDAIRE ENDPAGE
                             </Link>
                         </div>
                     </div>

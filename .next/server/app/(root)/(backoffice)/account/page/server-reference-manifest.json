@@ -1,0 +1,60 @@
+{
+  "node": {
+    "0022a358f3a895515ba22ff142925402071a8f901f": {
+      "workers": {
+        "app/(root)/(backoffice)/account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(backoffice)/account/page/actions.js { ACTIONS_MODULE0 => \"[project]/libs/actions/session.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/libs/actions/authentication.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(backoffice)/account/page": "rsc"
+      }
+    },
+    "003c2f48fc9fd4b16b1b35e0c07441da6877e057d9": {
+      "workers": {
+        "app/(root)/(backoffice)/account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(backoffice)/account/page/actions.js { ACTIONS_MODULE0 => \"[project]/libs/actions/session.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/libs/actions/authentication.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(backoffice)/account/page": "rsc"
+      }
+    },
+    "0069552b5f2fb2d1588bad2f52a1e5e4092c77e2a5": {
+      "workers": {
+        "app/(root)/(backoffice)/account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(backoffice)/account/page/actions.js { ACTIONS_MODULE0 => \"[project]/libs/actions/session.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/libs/actions/authentication.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(backoffice)/account/page": "rsc"
+      }
+    },
+    "407615b1fe7c12b66d44b5b6eeb3ccb4d4bde5158a": {
+      "workers": {
+        "app/(root)/(backoffice)/account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(backoffice)/account/page/actions.js { ACTIONS_MODULE0 => \"[project]/libs/actions/session.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/libs/actions/authentication.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(backoffice)/account/page": "rsc"
+      }
+    },
+    "00f0bb854a9631403e20b09db56e5924b7c214739d": {
+      "workers": {
+        "app/(root)/(backoffice)/account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(root)/(backoffice)/account/page/actions.js { ACTIONS_MODULE0 => \"[project]/libs/actions/session.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/libs/actions/authentication.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(root)/(backoffice)/account/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}

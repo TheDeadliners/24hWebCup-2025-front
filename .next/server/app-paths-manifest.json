@@ -1,0 +1,7 @@
+{
+  "/(root)/(auth)/login/page": "app/(root)/(auth)/login/page.js",
+  "/(root)/(backoffice)/account/page": "app/(root)/(backoffice)/account/page.js",
+  "/(root)/(backoffice)/dashboard/page": "app/(root)/(backoffice)/dashboard/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

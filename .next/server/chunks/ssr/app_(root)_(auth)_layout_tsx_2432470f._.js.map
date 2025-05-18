@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/tepicharme/Developer/NextJS/webcup-2025-front/app/%28root%29/%28auth%29/layout.tsx"],"sourcesContent":["import {ReactNode} from \"react\";\n\nexport default function RootLayout({children}: Readonly<{ children: ReactNode }>) {\n    return (\n        <>{children}</>\n    );\n}\n"],"names":[],"mappings":";;;;;AAEe,SAAS,WAAW,EAAC,QAAQ,EAAoC;IAC5E,qBACI;kBAAG;;AAEX","debugId":null}}]
+}

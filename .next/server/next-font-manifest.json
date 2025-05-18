@@ -1,0 +1,19 @@
+{
+  "app": {
+    "[project]/app/(root)/(auth)/login/page": [
+      "static/media/wlpwgwvFAVdoq2_v_6QU82RHaA-s.p.296fbbb2.woff2"
+    ],
+    "[project]/app/(root)/(backoffice)/account/page": [
+      "static/media/wlpwgwvFAVdoq2_v_6QU82RHaA-s.p.296fbbb2.woff2"
+    ],
+    "[project]/app/(root)/(backoffice)/dashboard/page": [
+      "static/media/wlpwgwvFAVdoq2_v_6QU82RHaA-s.p.296fbbb2.woff2"
+    ],
+    "[project]/app/_not-found/page": [
+      "static/media/wlpwgwvFAVdoq2_v_6QU82RHaA-s.p.296fbbb2.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

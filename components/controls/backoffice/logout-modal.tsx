@@ -37,7 +37,7 @@ export default function LogoutModal({userData}: {userData: UserData}) {
                     <div className="modal-action justify-between">
                         <button type="button" className="btn btn-neutral" onClick={closeLogoutModal}>Annuler</button>
                         <button type="button" className="btn btn-error" onClick={logoutFromApplication} disabled={isLoggingOutState}>
-                            {!isLoggingOutState ? "Confirmer" : <>Déconnexion <SpinnerIcon className="icon animate-spin"/></>}
+                            {!isLoggingOutState ? "Confirmer" : <><SpinnerIcon className="icon animate-spin"/></>}
                         </button>
                     </div>
                 </div>
