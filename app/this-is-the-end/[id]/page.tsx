@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import {EndPage, view} from "@/libs/actions/endpages";
+import {EndPageResponse, view} from "@/libs/actions/endpages";
 
 type Props = {
     params: {
@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default async function EndPageDetail({ params }: Props) {
-    const endPage: EndPage = await view(params.id);
+    const endPage: EndPageResponse = await view(params.id);
 
     if (!endPage) {
         return notFound();

@@ -140,7 +140,7 @@ export async function getMines(): Promise<LeaderBoardResponse> {
     }
 }
 
-export async function view(viewId: string): Promise<EndPage> {
+export async function view(viewId: string): Promise<EndPageResponse> {
     try {
         const passwordResponse =  await axios.post(`${BASE_URL}/public/view`, {id: viewId}, {
             headers: {
@@ -154,7 +154,7 @@ export async function view(viewId: string): Promise<EndPage> {
         if (passwordResponse.status === 200) {
             return {
                 code: "REQUEST_SUCCEED",
-                message: passwordResponse.data as EndPage
+                message: passwordResponse.data
             }
         } else {
             return {
