@@ -145,28 +145,12 @@ const Leaderboard: React.FC = () => {
             {/* Noise overlay */}
             <div
                 className="fixed inset-0 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%220.1%22/%3E%3C/svg%3E')] opacity-10 pointer-events-none z-[-1]">
-
             </div>
             <div data-aos="fade-down"
                  data-aos-duration="1500" className="navbar bg-base-100 shadow-sm pt-5 pb-4">
                 <div className="navbar-start text-white">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <Link href="/" className="logo">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-                            </Link>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><Link href="/" className="font-semibold">Accueil</Link></li>
-                            <li><Link href="/leaderboard" className="font-semibold text-primary">Leaderboard</Link></li>
-                            <li><Link href="/#how-it-works" className="font-semibold">Comment ça marche</Link></li>
-                            <li><Link href="/#gallery" className="font-semibold">Exemples</Link></li>
-                            <li><Link href="/#testimonials" className="font-semibold">Témoignages</Link></li>
-                        </ul>
-                    </div>
-                    <a className="btn btn-ghost text-xl"><Image src="/images/logo.svg" alt="Logo Officielle" width={150} height={150}/></a>
+
+                    <a className="btn btn-ghost text-xl"><Image src="/images/logo.svg" alt="Logo Officielle" className="md:w-[150px]" width={100} height={100}/></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -178,6 +162,22 @@ const Leaderboard: React.FC = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <Link href="/" className="logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                            </Link>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1000 mt-3 w-52 p-2 shadow">
+                            <li><Link href="/" className="font-semibold">Accueil</Link></li>
+                            <li><Link href="/leaderboard" className="font-semibold text-primary">Leaderboard</Link></li>
+                            <li><Link href="/#how-it-works" className="font-semibold">Comment ça marche</Link></li>
+                            <li><Link href="/#gallery" className="font-semibold">Exemples</Link></li>
+                            <li><Link href="/#testimonials" className="font-semibold">Témoignages</Link></li>
+                        </ul>
+                    </div>
                     <Link href="/login" className="btn btn-primary hidden md:flex">
                         Créer ma EndPage
                     </Link>
@@ -198,7 +198,7 @@ const Leaderboard: React.FC = () => {
                     {/* GIFs flottants */}
                     <div data-aos="zoom-in"
                          data-aos-delay="100"
-                         data-aos-duration="1000" className="absolute top-[5%] right-[10%] opacity-70 animate-[float_8s_ease-in-out_infinite]">
+                         data-aos-duration="1000" className="absolute top-[5%] right-[10%] hidden md:flex opacity-70 animate-[float_8s_ease-in-out_infinite]">
                         <Image src="/images/medaille.png" alt="Porte qui claque" width={200} height={200}/>
                     </div>
                     <div data-aos="zoom-in"
@@ -216,7 +216,7 @@ const Leaderboard: React.FC = () => {
                     <div data-aos="zoom-in"
                          data-aos-delay="120"
                          data-aos-duration="1000"
-                        className="absolute top-[60%] right-[15%] opacity-70 animate-[float_8s_ease-in-out_infinite_5s]">
+                        className="absolute top-[60%] right-[15%] opacity-70 hidden md:flex  animate-[float_8s_ease-in-out_infinite_5s]">
                         <Image src="/images/couronne.png" alt="Dramatique" width={200} height={200}/>
                     </div>
                 </div>
